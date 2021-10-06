@@ -11,7 +11,7 @@ df = pd.read_csv('Photodiode2.csv')
 
 # Slicing 
 df['f'] = df.Photodiode.astype(str).str[:2].astype(int)
-# Extracting peak value 
+# Extracting paradigm starting value 
 a = df[df.f >= 31]
 a.reset_index(level=0, inplace=True)
 value = a.iloc[0, 0]
