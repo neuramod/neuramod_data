@@ -1,6 +1,6 @@
 Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
 
-### Datasets formating and uploading
+## Datasets formating and uploading
 * for any new data saved locally, save the new data folder under the main standard folder for the three different data types:
 > BLED: Bluetooth EEG recordings
 
@@ -122,3 +122,10 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
 </table>
 
 * Run the notebook
+
+* When done, check your datasets. If you select one, it should like below with relevant child-parent relationships and metadata (Make sure you set the right sensor, stim and proj objects)
+<table>
+<tr>
+<td><img src="https://user-images.githubusercontent.com/3306992/212733682-c59440ae-8bb5-4c13-8cbb-97e37e55d66e.png"  alt="" width = 100% height = auto></td>
+</tr>
+</table>
