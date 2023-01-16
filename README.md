@@ -7,15 +7,23 @@ temporary datasets for internal use and project development
 ## REPOSITORY STRUCTURE
 ### Code
 A list of Python scripts and Jupyter notebooks to be used on the OpenBis server or locally.
-
+* `README.md`: General info [LINK](https://github.com/neuramod/neuramod_data/blob/main/code/README.md)
 #### - Population
-
+* `000_PopulationStratifiedSegmentPlot.ipynb`: a simple script that plots the distribution of the population segment [LINK]()
+* `001_VisualizeWholePopulationDistribution.ipynb`: plots the population sample distribution [LINK]()
 #### - Processing
 #### - Streaming
 
 ### Data
+Raw and Processed datasets. Large generated files such as generated stimulations are kept on servers
+
+#### - Raw
+#### - Processed
 
 ### Population
+Population data recordings
+
+*
 
 ## DATA SPECIFICATIONS
 ### BIDS
