@@ -30,7 +30,9 @@ Population data recordings
 * https://bids.neuroimaging.io/
 * https://www.nature.com/articles/s41597-019-0104-8
 
-## WLS (Windows Linux System)
+## WLS (Windows Linux Subsystem)
+* Install WLS : https://learn.microsoft.com/en-us/windows/wsl/install
+* Install creddentials with IT
 
 ## OPENBIS
 ### Official documentation
