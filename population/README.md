@@ -1,3 +1,5 @@
+Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
+
 ### Population Management
 * registration and session recordings: `population\population.xlsx`
 * openbis update or register participants: `population\openbis\`
