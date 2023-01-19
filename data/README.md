@@ -129,3 +129,33 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
 <td><img src="https://user-images.githubusercontent.com/3306992/212733682-c59440ae-8bb5-4c13-8cbb-97e37e55d66e.png"  alt="" width = 100% height = auto></td>
 </tr>
 </table>
+
+* This is what a BLED dataset should contain (for a Bitbrain Versatile 32 recording device):
+  - `signalsInfo.json`: signals report data
+  - `signalsInfo.csv`: signals report data
+  - `Photodiode.csv`: photodiode data
+  - `Layout.xlsx`: custom eeg layout data
+  - `IMU_B.csv`: IMU data
+  - `ExG_B.csv`: analog input data
+  - `EEG.csv`: eeg data
+  - `EEG-impedances.csv`: electrodes impedance data
+  - `D in.csv`: digital input data
+  
+* This is what a SDCD dataset should contain (for a Bitbrain Versatile 32 recording device):
+  - `signalsInfo.csv`: signals report data
+  - `Photodiode.csv`: photodiode data
+  - `IMU_B.csv`: IMU data
+  - `ExG_B.csv`: analog input data
+  - `EEG.csv`: eeg data
+  - `EEG-impedances.csv`: electrodes impedance data
+  - `D in.csv`: digital input data
+  - `0_BBTCapV9.bbt`: legacy data file
+  
+ * This is what a LSLD dataset should contain (for a Bitbrain Versatile 32 recording device):
+  - `...`: ...
+  
+ * This is what a STIM dataset should contain (for a Psychopy presentation paradigm):
+  - `4466_P001_S003_T001_rsvp_paradigm_2022_Dec_07_0754.psydat`: Psychopy backup file
+  - `4466_P001_S003_T001_rsvp_paradigm_2022_Dec_07_0754.log`: Psychopy log file
+  - `4466_P001_S003_T001_rsvp_paradigm_2022_Dec_07_0754.csv`: stimulation data
+  
