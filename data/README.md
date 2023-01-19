@@ -1,6 +1,6 @@
 Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
 
-## Datasets formating and uploading
+## Datasets formatting and uploading
 * for any new data saved locally, save the new data folder under the main standard folder for the three different data types:
 > BLED: Bluetooth EEG recordings
 
@@ -176,3 +176,7 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
   - `1285_P000_S000_T001.vmrk`: vmrk file used for bids generation
   - `1285_P000_S000_T001.vhdr`: vhdr file used for bids generation
   - `1285_P000_S000_T001.eeg`: eeg file used for bids generation
+
+## Datasets visual inspection
+* before uploading (right after a recording session)
+* after uploading on OpenBis
