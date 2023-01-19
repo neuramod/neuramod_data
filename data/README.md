@@ -130,7 +130,7 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
 </tr>
 </table>
 
-* This is what a BLED dataset should contain (for a Bitbrain Versatile 32 recording device):
+* This is what a RAW BLED dataset should contain (for a Bitbrain Versatile 32 recording device):
   - `signalsInfo.json`: signals report data
   - `signalsInfo.csv`: signals report data
   - `Photodiode.csv`: photodiode data
@@ -141,7 +141,7 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
   - `EEG-impedances.csv`: electrodes impedance data
   - `D in.csv`: digital input data
   
-* This is what a SDCD dataset should contain (for a Bitbrain Versatile 32 recording device):
+* This is what a RAW SDCD dataset should contain (for a Bitbrain Versatile 32 recording device):
   - `signalsInfo.csv`: signals report data
   - `Photodiode.csv`: photodiode data
   - `IMU_B.csv`: IMU data
@@ -151,11 +151,28 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
   - `D in.csv`: digital input data
   - `0_BBTCapV9.bbt`: legacy data file
   
- * This is what a LSLD dataset should contain (for a Bitbrain Versatile 32 recording device):
+ * This is what a RAW LSLD dataset should contain (for a Bitbrain Versatile 32 recording device):
   - `...`: ...
   
- * This is what a STIM dataset should contain (for a Psychopy presentation paradigm):
+ * This is what a RAW STIM dataset should contain (for a Psychopy presentation paradigm):
   - `4466_P001_S003_T001_rsvp_paradigm_2022_Dec_07_0754.psydat`: Psychopy backup file
   - `4466_P001_S003_T001_rsvp_paradigm_2022_Dec_07_0754.log`: Psychopy log file
   - `4466_P001_S003_T001_rsvp_paradigm_2022_Dec_07_0754.csv`: stimulation data
   
+* Go to `Jupyter Workspace` > `01 DATASETS` > `001_FromRawDatasetToRawBidsFormat`
+* Paste your session token again if necessary and run the notebook.
+* When done, BIDS datasets should now appear like this with all its parents-children relationships:
+<table>
+<tr>
+<td>
+<img width="1264" alt="Screenshot 2023-01-19 143039" src="https://user-images.githubusercontent.com/3306992/213455421-c9898423-f887-4541-9a8a-10ac89165587.png">
+</td>
+</tr>
+</table>
+
+* This is what a RAW BIDS dataset should contain:
+  - `1285_P000_S000_T001_events.csv`: events file used for bids generation
+  - `1285_P000_S000_T001.zip`: the bids dataset folder compressed
+  - `1285_P000_S000_T001.vmrk`: vmrk file used for bids generation
+  - `1285_P000_S000_T001.vhdr`: vhdr file used for bids generation
+  - `1285_P000_S000_T001.eeg`: eeg file used for bids generation
