@@ -17,7 +17,7 @@ A list of Python scripts and Jupyter notebooks to be used on the OpenBis server 
 * `000_grand_average_plot.py.py`: plots grand average and difference wave between two stimuli
 #### - Streaming
 * `000_lsl_stream_processing.py`: a lsl script that pull eeg data in chunks and pull data (photodiode and psychopy) in sample.
-* `utlis.py`: pre and post processing script for the data received from 000_lsl_stream_processing.py i.e., assign events, montage, bad channel rejection, high/low pass filter, notch filter, deternd, channel interpolation, reference, epoching, evoked response, time-frequency analysis, classifier pipelines
+* `utlis.py`: pre and post processing script for the data received from "000_lsl_stream_processing.py" i.e., assign events, montage, bad channel rejection, high/low pass filter, notch filter, deternd, channel interpolation, reference, epoching, evoked response, time-frequency analysis, classifier pipelines
 
 
 ### Data
