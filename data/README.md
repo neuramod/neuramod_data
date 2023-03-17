@@ -152,8 +152,8 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
   - `0_BBTCapV9.bbt`: legacy data file
   
  * This is what a RAW LSLD dataset should contain (for a Bitbrain Versatile 32 recording device):
-  -- `EEG.csv`: eeg data
-  -- `Photodiode.csv`: photodiode data 
+  - `EEG.csv`: eeg data
+  - `Photodiode.csv`: photodiode data 
   
  * This is what a RAW STIM dataset should contain (for a Psychopy presentation paradigm):
   - `4466_P001_S003_T001_rsvp_paradigm_2022_Dec_07_0754.psydat`: Psychopy backup file
