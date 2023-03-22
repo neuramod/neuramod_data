@@ -13,9 +13,11 @@ A list of Python scripts and Jupyter notebooks to be used on the OpenBis server 
 * `001_VisualizeWholePopulationDistribution.ipynb`: plots the population sample distribution. [LINK]()
 #### - Processing
 ##### - local
-* `000_initial_processing.py`: a script that assign events, data slicing and conversion of raw data to brain vision file format
+* `000_initial_processing.py`: a script that assign events, data slicing and conversion of raw data to brainvision file format
 * `000_processing_pipeline.py`: Pre and post processing script i.e., montage, bad channel rejection, high/low pass filter, notch filter, deternd, channel interpolation, reference, epoching, evoked response, time-frequency analysis, classifier pipelines, Peak amplitude and latency w.r.t specific time window.
 * `000_grand_average_plot.py.py`: plots grand average and difference wave between two stimuli.
+##### - openbis
+* `002_fromRawDatasetToRawBidsFormat.ipynb`: a script that assign events, data slicing, conversion of raw data to brainvision file format and fterwards converting the raw dataset into BIDS format.
 #### - Streaming
 * `000_lsl_stream_processing.py`: a lsl script that pull eeg data in chunks and pull data (photodiode and psychopy) in sample.
 * `utlis.py`: pre and post processing script for the data received from "000_lsl_stream_processing.py" i.e., assign events, montage, bad channel rejection, high/low pass filter, notch filter, deternd, channel interpolation, reference, epoching, classifier pipelines.
