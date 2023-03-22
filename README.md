@@ -12,6 +12,7 @@ A list of Python scripts and Jupyter notebooks to be used on the OpenBis server 
 * `000_PopulationStratifiedSegmentPlot.ipynb`: a simple script that plots the distribution of the population segment. [LINK]()
 * `001_VisualizeWholePopulationDistribution.ipynb`: plots the population sample distribution. [LINK]()
 #### - Processing
+##### - local
 * `000_initial_processing.py`: a script that assign events, data slicing and conversion of raw data to brain vision file format
 * `000_processing_pipeline.py`: Pre and post processing script i.e., montage, bad channel rejection, high/low pass filter, notch filter, deternd, channel interpolation, reference, epoching, evoked response, time-frequency analysis, classifier pipelines, Peak amplitude and latency w.r.t specific time window.
 * `000_grand_average_plot.py.py`: plots grand average and difference wave between two stimuli.
