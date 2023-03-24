@@ -169,7 +169,7 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
   - `4466_P001_S003_T001_rsvp_paradigm_2022_Dec_07_0754.csv`: stimulation data
   
 * ~~Go to `Jupyter Workspace` > `01 DATASETS` > `001_FromRawDatasetToRawBidsFormat`~~ (Deprecated)
-* * Go to `Jupyter Workspace` > `01 DATASETS` > `002_FromRawDatasetToRawBidsFormat` (New version)
+* Go to `Jupyter Workspace` > `01 DATASETS` > `002_FromRawDatasetToRawBidsFormat` (New version)
 * 
 * Paste your session token again if necessary and run the notebook.
 * When done, BIDS datasets should now appear like this with all its parents-children relationships:
