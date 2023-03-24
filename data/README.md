@@ -1,4 +1,7 @@
 Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
+## Previewing recorded data
+* Before uploading raw data to the OpenBis server, you can preview the recorded session a decide if it is ok or if it should be redone
+...
 
 ## Datasets formatting and uploading
 * for any new data saved locally, save the new data folder under the main standard folder for the three different data types:
