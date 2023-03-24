@@ -1,4 +1,7 @@
 Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
+## Previewing recorded data
+* Before uploading raw data to the OpenBis server, you can preview the recorded session a decide if it is ok or if it should be redone
+...
 
 ## Datasets formatting and uploading
 * for any new data saved locally, save the new data folder under the main standard folder for the three different data types:
@@ -44,6 +47,9 @@ for _d in BASE_FOLDERS:
         print(f"deleting original folder: {os.path.join(_d,_sd)}")
         shutil.rmtree(os.path.join(_d,_sd)) 
 ```
+### UPLOAD WITH MOBAXTERM
+...
+### UPLOAD WITH WLS
 * Launch WLS
 * Enter the passphrase (set with IT)
 * mount the server drive
@@ -80,6 +86,8 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
 <td><img src="https://user-images.githubusercontent.com/3306992/212132035-908d9ef5-230c-4f4f-9349-d5cd2ca36bce.png"  alt="" width = 100% height = auto></td>
 </tr>
 </table>
+
+### PROCESSING DATA FROM OPENBIS
 
 * in OpenBIS, Copy your current session token from `OpenBIS > Utilities > User Profile`
 
@@ -160,7 +168,9 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
   - `4466_P001_S003_T001_rsvp_paradigm_2022_Dec_07_0754.log`: Psychopy log file
   - `4466_P001_S003_T001_rsvp_paradigm_2022_Dec_07_0754.csv`: stimulation data
   
-* Go to `Jupyter Workspace` > `01 DATASETS` > `001_FromRawDatasetToRawBidsFormat`
+* ~~Go to `Jupyter Workspace` > `01 DATASETS` > `001_FromRawDatasetToRawBidsFormat`~~ (Deprecated)
+* Go to `Jupyter Workspace` > `01 DATASETS` > `002_FromRawDatasetToRawBidsFormat` (New version)
+* 
 * Paste your session token again if necessary and run the notebook.
 * When done, BIDS datasets should now appear like this with all its parents-children relationships:
 <table>
@@ -178,6 +188,10 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
   - `1285_P000_S000_T001.vhdr`: vhdr file used for bids generation
   - `1285_P000_S000_T001.eeg`: eeg file used for bids generation
 
-## Datasets visual inspection
-* before uploading (right after a recording session)
-* after uploading on OpenBis
+### DOWNLOAD DATA WITH MOBAXTERM
+...
+### DOWNLOAD DATA WITH WLS
+...
+## Preprocessing (Locally)
+* BIDS file checker and viewer
+* preprocessing pipeline documentation
