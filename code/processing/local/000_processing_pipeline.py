@@ -114,7 +114,7 @@ def processing(the_data):
 
     ## XdawnCov + TS+ SVC --- pipeline --- ##
 
-    epochs_data = epochs.get_data()
+    epochs_data = epochs.get_data() * 1e6
     labels = epochs.events[:, -1]
     cv = KFold(n_splits=10, shuffle=True, random_state=42)
     pr = np.zeros(len(labels))
