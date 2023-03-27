@@ -2,7 +2,7 @@ Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
 
 # processing
 ## local
-### 000_csvtoedfconversion.py
+#### 000_csvtoedfconversion.py
 * [download edf viewer setup](https://www.teuniz.net/edfbrowser/)
 * first convert EEG.csv to edf format using the script
 * afterwards preview the recorded data
@@ -15,13 +15,16 @@ Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
 <td><img src="https://user-images.githubusercontent.com/87472076/227936900-23d824ee-4170-49ed-8ed6-8be509e648d3.png"  alt="" width = 100% height = auto></td>
 </tr>
 </table>
+
+
 #### 000_processing_pipeline.py
 * the script pre and post processing pipeline
 * initilay standard 10-20 monatge is applied
 
+
 <table>
 <tr>
-<td><img src="https://user-images.githubusercontent.com/87472076/227962429-a429092c-352d-4d66-b2d9-b6172bdc90b3.png"  alt="" width = 100% height = auto></td>
+<td><img src="https://user-images.githubusercontent.com/87472076/227962429-a429092c-352d-4d66-b2d9-b6172bdc90b3.png"  alt="" width = 50% height = auto></td>
 </tr>
 </table>
 
