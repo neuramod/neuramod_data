@@ -48,6 +48,7 @@ for _d in BASE_FOLDERS:
         shutil.rmtree(os.path.join(_d,_sd)) 
 ```
 ### SETUP MOBAXTERM
+* [Download MOBAXTERM](https://mobaxterm.mobatek.net/)
 ### UPLOAD WITH MOBAXTERM
 ...
 ### UPLOAD WITH WLS
