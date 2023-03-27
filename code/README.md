@@ -2,7 +2,7 @@ Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
 
 # processing
 ## local
-#### 000_csvtoedfconversion.py [Link](https://github.com/neuramod/neuramod_data/blob/main/code/README.md)
+#### 000_csvtoedfconversion.py
 * [download edf viewer setup](https://www.teuniz.net/edfbrowser/)
 * first convert EEG.csv to edf format using the script
 * afterwards preview the recorded data
