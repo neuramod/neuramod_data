@@ -20,6 +20,11 @@ Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
 #### 000_processing_pipeline.py
 * the script includes pre and post processing pipeline
 * initially standard 10-20 monatge is applied
+```
+ten_twenty_montage = mne.channels.make_standard_montage('standard_1020')
+raw_1020 = exp.copy().set_montage(ten_twenty_montage)
+fig = raw_1020.plot_sensors(show_names=True, ch_type='eeg')
+```
 <table>
 <tr>
 <td><img src="https://user-images.githubusercontent.com/87472076/227962429-a429092c-352d-4d66-b2d9-b6172bdc90b3.png"  alt="" width = 50% height = auto></td>
