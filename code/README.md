@@ -43,7 +43,7 @@ Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
 </table>
 
 
-* detrending, bad interpolation is applied to the continous eeg data. Afterwards, reference is applied accross the channels (average).
+* detrending and bad channel interpolation is applied to the continous eeg data. Afterwards, reference is applied accross the channels (average).
 <table>
 <tr>
 <td><img src="https://user-images.githubusercontent.com/87472076/227969877-7375ef7d-1545-4975-ac3c-2732cb25adbd.png"  alt="" width = 100% height = auto></td>
