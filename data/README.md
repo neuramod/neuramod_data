@@ -221,7 +221,8 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
   - `1285_P000_S000_T001.eeg`: eeg file used for bids generation
 
 ### DOWNLOAD DATA WITH MOBAXTERM
-...
+* open the session that has been already created and then enter the passphrase and verfication code afterwards download the desired files
+
 ### DOWNLOAD DATA WITH WLS
 ...
 ## Preprocessing (Locally)
