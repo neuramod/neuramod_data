@@ -19,7 +19,7 @@ Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
 
 #### 000_processing_pipeline.py
 * the script includes pre and post processing pipeline
-* initilay standard 10-20 monatge is applied
+* initially standard 10-20 monatge is applied
 <table>
 <tr>
 <td><img src="https://user-images.githubusercontent.com/87472076/227962429-a429092c-352d-4d66-b2d9-b6172bdc90b3.png"  alt="" width = 50% height = auto></td>
