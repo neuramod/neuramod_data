@@ -15,7 +15,7 @@ A list of Python scripts and Jupyter notebooks to be used on the OpenBis server 
 ##### - local
 * `000_csvtoedfconversion.py`: a script that convert csv to edf file format for previewing recorded data [Link](https://github.com/neuramod/neuramod_data/blob/main/code/README.md)
 * `000_initial_processing.py`: a script that assign events, data slicing and conversion of raw data to brainvision file format
-* `000_processing_pipeline.py`: Pre and post processing script i.e., montage, bad channel rejection, high/low pass filter, notch filter, deternd, channel interpolation, reference, epoching, evoked response, time-frequency analysis, classifier pipelines, Peak amplitude and latency w.r.t specific time window.
+* `000_processing_pipeline.py`: Pre and post processing script i.e., montage, bad channel rejection, high/low pass filter, notch filter, deternd, channel interpolation, reference, epoching, evoked response, time-frequency analysis, classifier pipelines, Peak amplitude and latency w.r.t specific time window [Link](https://github.com/neuramod/neuramod_data/blob/main/code/README.md)
 * `000_grand_average_plot.py.py`: plots grand average and difference wave between two stimuli.
 ##### - openbis
 * `002_fromRawDatasetToRawBidsFormat.ipynb`: a script that assign events, data slicing w.r.t photodiode.csv cutoff value, conversion of raw data to brainvision file format and afterwards converting the raw dataset into BIDS format. [Link](https://github.com/neuramod/neuramod_data/blob/main/code/README.md)
