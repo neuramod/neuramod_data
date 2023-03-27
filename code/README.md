@@ -15,6 +15,24 @@ Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
 <td><img src="https://user-images.githubusercontent.com/87472076/227936900-23d824ee-4170-49ed-8ed6-8be509e648d3.png"  alt="" width = 100% height = auto></td>
 </tr>
 </table>
+#### 000_processing_pipeline.py
+* the script pre and post processing pipeline
+* initilay standard 10-20 monatge is applied
+
+<table>
+<tr>
+<td><img src="https://user-images.githubusercontent.com/87472076/227962429-a429092c-352d-4d66-b2d9-b6172bdc90b3.png"  alt="" width = 100% height = auto></td>
+</tr>
+</table>
+
+
+* channel rejection is applied having the parameter vaules of bad_threshold=0.5 and distance_threshold=0.96
+<table>
+<tr>
+<td><img src="https://user-images.githubusercontent.com/87472076/227963405-56faeebc-8c77-4630-82a5-848e30f91340.png"  alt="" width = 100% height = auto></td>
+</tr>
+</table>
+
 
 
 ## openbis
