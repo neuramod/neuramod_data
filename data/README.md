@@ -56,6 +56,12 @@ for _d in BASE_FOLDERS:
 <td><img src="https://user-images.githubusercontent.com/87472076/227911480-abe5a7c4-bda6-425b-a12f-0ae8948e6f1c.PNG"  alt="" width = 100% height = auto></td>
 </tr>
 </table>
+* create a new SSH session
+<table>
+<tr>
+<td><img src="https://user-images.githubusercontent.com/87472076/227917446-fe9aea53-0c95-40a7-b8cc-f4207b0f89ce.PNG"  alt="" width = 100% height = auto></td>
+</tr>
+</table>
 
 ### UPLOAD WITH MOBAXTERM
 ...
