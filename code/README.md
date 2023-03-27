@@ -33,6 +33,9 @@ fig = raw_1020.plot_sensors(show_names=True, ch_type='eeg')
 
 
 * channel rejection is applied having the parameter vaules of bad_threshold=0.5 and distance_threshold=0.96
+```
+bads, info = nk.eeg_badchannels(raw_1020, bad_threshold=0.5,distance_threshold=0.96, show=True)
+```
 <table>
 <tr>
 <td><img src="https://user-images.githubusercontent.com/87472076/227963405-56faeebc-8c77-4630-82a5-848e30f91340.png"  alt="" width = 100% height = auto></td>
@@ -41,6 +44,12 @@ fig = raw_1020.plot_sensors(show_names=True, ch_type='eeg')
 
 
 *  the signal is bandpass filtered between 0.1 and 20 Hz using fifth order infinite impulse response (IIR) Butterworth filter. To remove power line noise in the continuous EEG data a notch filter was applied with a stopband of 50 Hz
+```
+filt=raw_1020.filter(0.1, 20,method='iir', iir_params=dict(order=5, ftype='butter', output='sos', picks='eeg', exclude='bads'))
+pl_freq=50.
+ny_freq=128.
+nth = filt.notch_filter(np.arange(pl_freq, ny_freq, pl_freq), fir_design='firwin')
+```
 <table>
 <tr>
 <td><img src="https://user-images.githubusercontent.com/87472076/227967783-d7963cb8-cb09-41a6-b372-b0c04e3fe2d4.png"  alt="" width = 100% height = auto></td>
@@ -49,6 +58,14 @@ fig = raw_1020.plot_sensors(show_names=True, ch_type='eeg')
 
 
 * detrending and bad channel interpolation is applied to the continous eeg data. Afterwards, reference is applied accross the channels (average).
+```
+b = nth._data
+sos = butter(20, 0.1, output='sos')
+y = sosfiltfilt(sos, b)
+nth._data = y
+eeg_data_interp = nth.copy().interpolate_bads(reset_bads=True)
+ref_data= eeg_data_interp.set_eeg_reference(ref_channels='average')
+```
 <table>
 <tr>
 <td><img src="https://user-images.githubusercontent.com/87472076/227969877-7375ef7d-1545-4975-ac3c-2732cb25adbd.png"  alt="" width = 100% height = auto></td>
