@@ -16,7 +16,7 @@ Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
 </tr>
 </table>
 
-## openbis
-* Script converts raw eeg data set to BIDS format. In order to validate the BIDS format please click on the link and upload the BIDS folder 
-* [BIDS dataset to validate](https://bids-standard.github.io/bids-validator/)
+#### openbis
+* Script converts raw eeg data set to BIDS format. In order to validate the BIDS format please click on the link and upload the BIDS folder. [BIDS dataset to validate](https://bids-standard.github.io/bids-validator/)
+
 
