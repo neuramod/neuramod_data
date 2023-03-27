@@ -65,8 +65,22 @@ for _d in BASE_FOLDERS:
 </tr>
 </table>
 
+
+* enter passphrase and verification code
+<table>
+<tr>
+<td><img src="https://user-images.githubusercontent.com/87472076/227919068-8e341ad2-e110-4df3-a155-91e6d2d40e78.PNG"  alt="" width = 100% height = auto></td>
+</tr>
+</table>
+
 ### UPLOAD WITH MOBAXTERM
-...
+* once the session is created successfully upload data from local server to leomed server.
+<table>
+<tr>
+<td><img src="https://user-images.githubusercontent.com/87472076/227919541-561e5edc-e402-4ccc-9eff-aedc8d453915.PNG"  alt="" width = 100% height = auto></td>
+</tr>
+</table>
+ 
 ### UPLOAD WITH WLS
 * Launch WLS
 * Enter the passphrase (set with IT)
