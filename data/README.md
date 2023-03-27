@@ -47,7 +47,7 @@ for _d in BASE_FOLDERS:
         print(f"deleting original folder: {os.path.join(_d,_sd)}")
         shutil.rmtree(os.path.join(_d,_sd)) 
 ```
-### Setup MOBAXTERM
+### SETUP MOBAXTERM
 ### UPLOAD WITH MOBAXTERM
 ...
 ### UPLOAD WITH WLS
