@@ -222,6 +222,13 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
 
 ### DOWNLOAD DATA WITH MOBAXTERM
 * open the session that has been already created and then enter the passphrase and verfication code afterwards download the desired files
+<table>
+<tr>
+<td><img src="https://user-images.githubusercontent.com/87472076/227923754-f25dc17d-2586-4954-b1ba-e47949ed3e34.PNG"  alt="" width = 100% height = auto></td>
+</tr>
+</table>
+
+
 
 ### DOWNLOAD DATA WITH WLS
 ...
