@@ -37,10 +37,18 @@ Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
 </table>
 
 
-*  the signal is bandpass filtered between 0.1 and 20 Hz using fifth order infinite impulse response (IIR) Butterworth filter. To remove power line noise in the continuous EEG data a notch filter was applied with a stopband of 50 Hz.
+*  the signal is bandpass filtered between 0.1 and 20 Hz using fifth order infinite impulse response (IIR) Butterworth filter. To remove power line noise in the continuous EEG data a notch filter was applied with a stopband of 50 Hz
 <table>
 <tr>
 <td><img src="https://user-images.githubusercontent.com/87472076/227967783-d7963cb8-cb09-41a6-b372-b0c04e3fe2d4.png"  alt="" width = 100% height = auto></td>
+</tr>
+</table>
+
+
+* detrending, bad interpolation is applied to the continous eeg data. Afterwards, reference is applied accross the channels (average).
+<table>
+<tr>
+<td><img src="https://user-images.githubusercontent.com/87472076/227969877-7375ef7d-1545-4975-ac3c-2732cb25adbd.png"  alt="" width = 100% height = auto></td>
 </tr>
 </table>
 
