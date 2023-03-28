@@ -50,6 +50,7 @@ for _d in BASE_FOLDERS:
 ### SETUP MOBAXTERM
 * [Download MOBAXTERM](https://mobaxterm.mobatek.net/)
 * Launch MOBAXTERM
+* Make sure to connect with ETH VPN [cisco secure client](https://it.arch.ethz.ch/vpn-mac-cisco-client/) 
 * start a new session
 <table>
 <tr>
