@@ -76,6 +76,7 @@ ref_data= eeg_data_interp.set_eeg_reference(ref_channels='average')
 ## openbis
 #### 002_fromRawDatasetToRawBidsFormat.ipynb
 * Script converts raw eeg data set to BIDS format, data slicing and assign events.
+* To validate the BIDS format please click on the link and upload the BIDS folder. [BIDS dataset to validate](https://bids-standard.github.io/bids-validator/)
 <table>
 <tr>
 <td><img src="https://user-images.githubusercontent.com/87472076/227949996-0254c3fb-03a3-4912-a84d-58fc23ce715d.png"  alt="" width = 100% height = auto></td>
