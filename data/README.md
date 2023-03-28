@@ -236,7 +236,7 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
 ## Preprocessing (Locally)
 * BIDS file checker and viewer:
 In order to validate the BIDS format please click on the link and upload the BIDS folder. [BIDS dataset to validate](https://bids-standard.github.io/bids-validator/)
-Script to check the validation of BIDS format.
+* Script to check the validation of BIDS format
 ```
 pip install -U bids_validator (install bids_validator)
 ```
