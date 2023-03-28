@@ -234,8 +234,8 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
 ### DOWNLOAD DATA WITH WLS
 
 ## Preprocessing (Locally)
-* BIDS file checker and viewer:
-In order to validate the BIDS format please click on the link and upload the BIDS folder. [BIDS dataset to validate](https://bids-standard.github.io/bids-validator/)
+### BIDS file checker and viewer
+* In order to validate the BIDS format please click on the link and upload the BIDS folder. [BIDS dataset to validate](https://bids-standard.github.io/bids-validator/)
 * Script to check the validation of BIDS format
 ```
 pip install -U bids_validator (install bids_validator)
@@ -247,8 +247,8 @@ for filepath in filepaths:
     print(validator.is_bids(filepath))
 ```
 
-* preprocessing pipeline documentation
- - the script (000_processing_pipeline.py) includes pre and post processing pipeline [](https://github.com/neuramod/neuramod_data/tree/main/code/processing/local)
+### preprocessing pipeline documentation
+ - the script includes pre and post processing pipeline [000_processing_pipeline.py](https://github.com/neuramod/neuramod_data/tree/main/code/processing/local)
  - initially standard 10-20 monatge is applied
 ```
 ten_twenty_montage = mne.channels.make_standard_montage('standard_1020')
