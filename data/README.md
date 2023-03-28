@@ -61,7 +61,7 @@ for _d in BASE_FOLDERS:
 * create a new SSH session
 <table>
 <tr>
-<td><img src="https://user-images.githubusercontent.com/87472076/227917446-fe9aea53-0c95-40a7-b8cc-f4207b0f89ce.PNG"  alt="" width = 100% height = auto></td>
+<td><img src="https://user-images.githubusercontent.com/87472076/228225950-cb2bc592-2f0a-4acf-9b57-847c8693f76e.PNG"  alt="" width = 100% height = auto></td>
 </tr>
 </table>
 
@@ -69,7 +69,7 @@ for _d in BASE_FOLDERS:
 * enter passphrase and verification code
 <table>
 <tr>
-<td><img src="https://user-images.githubusercontent.com/87472076/228225950-cb2bc592-2f0a-4acf-9b57-847c8693f76e.PNG"  alt="" width = 100% height = auto></td>
+<td><img src="https://user-images.githubusercontent.com/87472076/228226892-94cf0734-2f3a-4e92-8857-e76a4b93111a.PNG"  alt="" width = 100% height = auto></td>
 </tr>
 </table>
 
