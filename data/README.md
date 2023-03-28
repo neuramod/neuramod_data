@@ -248,8 +248,8 @@ for filepath in filepaths:
 ```
 
 * preprocessing pipeline documentation
-* the script (000_processing_pipeline.py) includes pre and post processing pipeline [](https://github.com/neuramod/neuramod_data/tree/main/code/processing/local)
-* initially standard 10-20 monatge is applied
+ - the script (000_processing_pipeline.py) includes pre and post processing pipeline [](https://github.com/neuramod/neuramod_data/tree/main/code/processing/local)
+ - initially standard 10-20 monatge is applied
 ```
 ten_twenty_montage = mne.channels.make_standard_montage('standard_1020')
 raw_1020 = exp.copy().set_montage(ten_twenty_montage)
@@ -262,7 +262,7 @@ fig = raw_1020.plot_sensors(show_names=True, ch_type='eeg')
 </table>
 
 
-* channel rejection is applied having the parameter vaules of bad_threshold=0.5 and distance_threshold=0.96
+ - channel rejection is applied having the parameter vaules of bad_threshold=0.5 and distance_threshold=0.96
 ```
 bads, info = nk.eeg_badchannels(raw_1020, bad_threshold=0.5,distance_threshold=0.96, show=True)
 ```
@@ -273,7 +273,7 @@ bads, info = nk.eeg_badchannels(raw_1020, bad_threshold=0.5,distance_threshold=0
 </table>
 
 
-*  the signal is bandpass filtered between 0.1 and 20 Hz using fifth order infinite impulse response (IIR) Butterworth filter. To remove power line noise in the continuous EEG data a notch filter was applied with a stopband of 50 Hz
+ - the signal is bandpass filtered between 0.1 and 20 Hz using fifth order infinite impulse response (IIR) Butterworth filter. To remove power line noise in the continuous EEG data a notch filter was applied with a stopband of 50 Hz
 ```
 filt=raw_1020.filter(0.1, 20,method='iir', iir_params=dict(order=5, ftype='butter', output='sos', picks='eeg', exclude='bads'))
 pl_freq=50.
@@ -287,7 +287,7 @@ nth = filt.notch_filter(np.arange(pl_freq, ny_freq, pl_freq), fir_design='firwin
 </table>
 
 
-* detrending and bad channel interpolation is applied to the continous eeg data. Afterwards, reference is applied accross the channels (average).
+ - detrending and bad channel interpolation is applied to the continous eeg data. Afterwards, reference is applied accross the channels (average).
 ```
 b = nth._data
 sos = butter(20, 0.1, output='sos')
