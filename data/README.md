@@ -69,7 +69,7 @@ for _d in BASE_FOLDERS:
 * enter passphrase and verification code
 <table>
 <tr>
-<td><img src="https://user-images.githubusercontent.com/87472076/227919068-8e341ad2-e110-4df3-a155-91e6d2d40e78.PNG"  alt="" width = 100% height = auto></td>
+<td><img src="https://user-images.githubusercontent.com/87472076/228225950-cb2bc592-2f0a-4acf-9b57-847c8693f76e.PNG"  alt="" width = 100% height = auto></td>
 </tr>
 </table>
 
