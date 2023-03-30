@@ -44,6 +44,9 @@ Population data recordings
 * Install WLS : https://learn.microsoft.com/en-us/windows/wsl/install
 * Install creddentials with IT
 
+## MOBAXTerm
+...
+
 ## OPENBIS
 ### Official documentation
 * User: https://openbis.ch/index.php/docs/user-documentation/
