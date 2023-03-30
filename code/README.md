@@ -2,7 +2,7 @@ Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
 
 # processing
 > ## local
-#### 000_csvtoedfconversion.py : Convert Raw Data from a EEG.csv file into EDF format for visual inspection
+#### 000_csvtoedfconversion.py : Convert Raw Data from a EEG.csv file into EDF format for visual inspection [Link](https://github.com/neuramod/neuramod_data/tree/main/code/processing/local)
  1. [download edf viewer setup](https://www.teuniz.net/edfbrowser/)
  2. first convert EEG.csv to edf format using the script
  3. afterwards preview the recorded data
