@@ -232,6 +232,16 @@ rsync -rav /mnt/z/neuramod_data/data/raw/stim/O+MATERIALS+NRMD+NRMD_UPLD_RAWD_ST
 
 
 ### DOWNLOAD DATA WITH WLS
+* Download the BIDS dataset (or any other file) first on the VM instance in your session folder (eg. openbis_sample)
+* On your local console use the following command
+```
+ rsync -rtDvz --no-times -e "ssh -J <USERNAME>@jump-neuramod.leomed.ethz.ch -i ~/.ssh/known_hosts" <USERNAME>@login-neuramod.leomed.ethz.ch:/cluster/work/neuramod/<REMOTE_FOLDER>/<FILE_NAME> /mnt/z/neuramod_data/data/processed/<LOCAL_FOLDER>
+ ```
+ where <USERNAME> is your username (eg. pierrecu), <REMOTE_FOLDER> is the VM folder where you downloaded the data (eg. openbis_sample), <FILE_NAME> is the file name to download with extra subpath if necessary (eg. 7593_P000_S000_T001/7593_P000_S000_T001.zip), <LOCAL_FOLDER> is the local folder path where to locally store the file (eg. bids).
+* remounting the drive locally might be necessary if you strated a new session
+```
+sudo mount -t drvfs Z: /mnt/z
+```
 
 ## Preprocessing (Locally)
 ### BIDS file checker and viewer
