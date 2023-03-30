@@ -15,7 +15,18 @@ Raw and Processed datasets. Large generated files such as generated stimulations
 ### Population
 Population data recordings
 * `README.md`: General info [LINK](https://github.com/neuramod/neuramod_data/blob/main/population/README.md)
-
+## TYPICAL WORKFLOW
+### REGISTERING AND UPDATING A POPULATION SAMPLE
+### REGISTERING AND UPDATING A SENSOR, EXPERIMENT, SESSION or PHASE
+### - OFFLINE MODE -
+#### RECORDING RAW DATA
+#### PREVIEWING RAW DATA
+#### UPLOADING RAW DATA TO OPENBIS
+#### REMOTE STANDARDIZATION
+#### LOCAL DOWNLOAD AND STANDARDS VALIDATION
+#### LOCAL PRE-PROCESSING AND DOCUMENTATION
+#### LOCAL ANALYSIS AND DOCUMENTATION
+### - ONLINE MODE -
 ## DATA SPECIFICATIONS
 ### BIDS
 * https://bids.neuroimaging.io/
