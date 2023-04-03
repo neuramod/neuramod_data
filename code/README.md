@@ -72,6 +72,11 @@ ref_data= eeg_data_interp.set_eeg_reference(ref_channels='average')
 </table>
 
 
+#### 000_processing_pipeline.py
+* event labeling
+* EEG data slicing using photodiode cutoff value
+* convert EEG data to brain vision format
+
 > ## openbis
 #### 002_fromRawDatasetToRawBidsFormat.ipynb
 * Script converts raw eeg data set to BIDS format, data slicing and assign events.
