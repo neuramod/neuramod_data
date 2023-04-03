@@ -61,9 +61,6 @@ nth = filt.notch_filter(np.arange(pl_freq, ny_freq, pl_freq), fir_design='firwin
 </table>
 
 
-#### 000_grand_average_plot.py
-
-
 * detrending and bad channel interpolation is applied to the continous eeg data. Afterwards, reference is applied accross the channels (average).
 ```
 b = nth._data
@@ -79,6 +76,8 @@ ref_data= eeg_data_interp.set_eeg_reference(ref_channels='average')
 </tr>
 </table>
 
+
+#### 000_grand_average_plot.py
 
 > ## openbis
 #### 002_fromRawDatasetToRawBidsFormat.ipynb
