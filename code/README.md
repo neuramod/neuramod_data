@@ -91,9 +91,7 @@ import glob
 conditions = ['target', 'ntarget']
 data_dir = 'evoked'
 data_files = glob.glob(data_dir + '/0*_S*-ave.fif' )
-data_files
 evokeds = {}
-
 for idx, c in enumerate(conditions):
     evokeds[c] = [mne.read_evokeds(d)[idx] for d in data_files]
 evokeds
