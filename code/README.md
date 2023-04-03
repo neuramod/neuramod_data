@@ -113,8 +113,6 @@ for i in channel:
 diff_waves = []
 for i in range(len(data_files)):
     diff_waves.append(mne.combine_evoked([evokeds['target'][i], evokeds['ntarget'][i]], weights=[1, -1]) )
-diff_waves
-
 contrast = 'Difference wave: target-ntarget'
 bb=mne.viz.plot_compare_evokeds({contrast:diff_waves}, combine='mean',
                             legend=None,
