@@ -45,8 +45,8 @@ Population data recordings
 * Install creddentials with IT
 
 ## MOBAXTerm
-...
-
+* Install WLS : https://mobaxterm.mobatek.net/
+* Create a new session : https://unlimited.ethz.ch/display/LeoMed2/Data+transfer+with+scp%2C+sftp+or+rsync
 ## OPENBIS
 ### Official documentation
 * User: https://openbis.ch/index.php/docs/user-documentation/
