@@ -78,14 +78,43 @@ ref_data= eeg_data_interp.set_eeg_reference(ref_channels='average')
 
 
 #### 000_grand_average_plot.py
+* import libraries
+```
+import mne
+mne.set_log_level('error')  # reduce extraneous MNE output
+import matplotlib.pyplot as plt
+import numpy as np
+import glob
+```
+* plot grand average
+```
+conditions = ['target', 'ntarget']
+data_dir = 'evoked'
+data_files = glob.glob(data_dir + '/0*_S*-ave.fif' )
+data_files
+evokeds = {}
+
+for idx, c in enumerate(conditions):
+    evokeds[c] = [mne.read_evokeds(d)[idx] for d in data_files]
+evokeds
+channel = evokeds['target'][0]
+channel = channel.ch_names
+for i in channel:
+    mne.viz.plot_compare_evokeds(evokeds, combine= 'mean', picks=i);
+```
+<table>
+<tr>
+<td><img src="https://user-images.githubusercontent.com/87472076/229495622-fd2f9e1e-23ff-404c-bfd4-043163c393bc.png"  alt="" width = 100% height = auto></td>
+<td><img src="https://user-images.githubusercontent.com/87472076/229495638-0cdde271-7503-4eff-b529-f16df2efb132.png"  alt="" width = 100% height = auto></td>
+</tr>
+</table>
+
 
 * create difference waves to more easily visualize the difference between conditions
 ```
 diff_waves = []
 for i in range(len(data_files)):
     diff_waves.append(mne.combine_evoked([evokeds['target'][i], evokeds['ntarget'][i]], weights=[1, -1]) )
-    
-evokeds.append(diff_waves)
 diff_waves
 
 contrast = 'Difference wave: target-ntarget'
@@ -98,8 +127,8 @@ plt.show()
 ```
 <table>
 <tr>
-<td><img src="https://user-images.githubusercontent.com/87472076/229471737-fac4dc57-261c-46bd-bf71-c6d1c061d99b.png"  alt="" width = 100% height = auto></td>
-<td><img src="https://user-images.githubusercontent.com/87472076/229471756-f4b0ab6e-a6cd-4589-ad0c-6dd251a5c745.png"  alt="" width = 100% height = auto></td>
+<td><img src="https://user-images.githubusercontent.com/87472076/229495022-99f55e87-e228-4a2c-aaa7-3576af0a508f.png"  alt="" width = 100% height = auto></td>
+<td><img src="https://user-images.githubusercontent.com/87472076/229495045-50408221-5461-40ba-8d01-8753e244a561.png"  alt="" width = 100% height = auto></td>
 </tr>
 </table>
 
