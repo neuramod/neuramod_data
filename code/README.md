@@ -79,6 +79,32 @@ ref_data= eeg_data_interp.set_eeg_reference(ref_channels='average')
 
 #### 000_grand_average_plot.py
 
+* create difference waves to more easily visualize the difference between conditions
+```
+diff_waves = []
+for i in range(len(data_files)):
+    diff_waves.append(mne.combine_evoked([evokeds['target'][i], evokeds['ntarget'][i]], weights=[1, -1]) )
+    
+evokeds.append(diff_waves)
+diff_waves
+
+contrast = 'Difference wave: target-ntarget'
+bb=mne.viz.plot_compare_evokeds({contrast:diff_waves}, combine='mean',
+                            legend=None,
+                            picks=roi, show_sensors='upper right',
+                            title=contrast
+                            )
+plt.show()
+```
+<table>
+<tr>
+<td><img src="https://user-images.githubusercontent.com/87472076/229471737-fac4dc57-261c-46bd-bf71-c6d1c061d99b.png"  alt="" width = 100% height = auto></td>
+<td><img src="https://user-images.githubusercontent.com/87472076/229471756-f4b0ab6e-a6cd-4589-ad0c-6dd251a5c745.png"  alt="" width = 100% height = auto></td>
+</tr>
+</table>
+
+
+
 > ## openbis
 #### 002_fromRawDatasetToRawBidsFormat.ipynb
 * Script converts raw eeg data set to BIDS format, data slicing and assign events.
