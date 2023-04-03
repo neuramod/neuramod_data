@@ -16,6 +16,11 @@ Home repo page: [LINK](https://github.com/neuramod/neuramod_data)
 </table>
 
 
+#### 000_raw_processing.py
+* event labeling
+* EEG data slicing using photodiode cutoff value
+* convert EEG data to brain vision format
+
 #### 000_processing_pipeline.py
  * the script includes pre and post processing pipeline
  * initially standard 10-20 montage is applied
@@ -71,11 +76,6 @@ ref_data= eeg_data_interp.set_eeg_reference(ref_channels='average')
 </tr>
 </table>
 
-
-#### 000_processing_pipeline.py
-* event labeling
-* EEG data slicing using photodiode cutoff value
-* convert EEG data to brain vision format
 
 > ## openbis
 #### 002_fromRawDatasetToRawBidsFormat.ipynb
