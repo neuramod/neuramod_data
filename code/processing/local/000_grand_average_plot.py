@@ -13,30 +13,22 @@ import glob
 
 #%%
 conditions = ['target', 'ntarget']
-#%%
 data_dir = 'evoked'
 data_files = glob.glob(data_dir + '/0*_S*-ave.fif' )
-data_files
-
-#%%
 evokeds = {}
-
 for idx, c in enumerate(conditions):
     evokeds[c] = [mne.read_evokeds(d)[idx] for d in data_files]
 evokeds
-#%%
-channels =['Fp1','Fpz','Fp2','AF3','AF4','FC1','FCz','FC2','F3','Fz','F4','CP1','CP2','CPz','CP5','CP6',
-           'C3','Cz','C4','P3','P4','Pz','P7','P8','PO3','PO4','POz','PO7','PO8','O1','Oz','O2']
-for i in channels:
+channel = evokeds['target'][0]
+channel = channel.ch_names
+for i in channel:
     mne.viz.plot_compare_evokeds(evokeds, combine= 'mean', picks=i);
 #%%
-# Define plot parameters
+# Plot grand average w.r.t roi
 roi = ['O1','Oz','O2']
 
 color_dict = {'target':'blue', 'ntarget':'red'}
 linestyle_dict = {'target':'-', 'ntarget':'-'}
-
-
 aa=mne.viz.plot_compare_evokeds(evokeds,
                              combine='mean',
                              legend='lower right',
@@ -51,10 +43,6 @@ plt.show()
 diff_waves = []
 for i in range(len(data_files)):
     diff_waves.append(mne.combine_evoked([evokeds['target'][i], evokeds['ntarget'][i]], weights=[1, -1]) )
-    
-evokeds.append(diff_waves)
-diff_waves
-
 contrast = 'Difference wave: target-ntarget'
 bb=mne.viz.plot_compare_evokeds({contrast:diff_waves}, combine='mean',
                             legend=None,
@@ -62,13 +50,10 @@ bb=mne.viz.plot_compare_evokeds({contrast:diff_waves}, combine='mean',
                             title=contrast
                             )
 plt.show()
-
 diff_evok =[]
 for i in diff_waves:
     x = (i._data)
     diff_evok.append(x)
-
-
 evk = evokeds.append('diff_waves')
 
 
