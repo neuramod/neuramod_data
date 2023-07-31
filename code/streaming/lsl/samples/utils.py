@@ -127,15 +127,15 @@ def processing(events, eeg_data):
     ## reference ##
     ref_data= nth.set_eeg_reference(ref_channels='average')
     
-    onset =  np.arange(0, 90, 0.3).tolist()
-    duration =  np.arange(0, 90, 0.3).tolist()
+    onset =  np.arange(0, 115, 0.8).tolist()
+    duration =  np.arange(0, 115, 0.8).tolist()
     description = events['event_label']
 
     new_annotations = mne.Annotations(onset, duration,
                                       description)
     ref_data.set_annotations(new_annotations)
     events,event_ids = mne.events_from_annotations(ref_data)
-
+    print(event_ids)
     print(len(event_ids))
     if len((event_ids)) == 12:
         mapping = {1: 'target:0', 
