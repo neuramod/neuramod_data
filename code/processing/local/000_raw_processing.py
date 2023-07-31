@@ -47,7 +47,7 @@ def initial_processing(the_data):
     print(df_slice.head())
     df_slice['f'] = df_slice['Photodiode-ch1'].astype(str).str[:2].astype(int)
     # Extracting peak value 
-    a = df_slice[df_slice.f >= 31]   # peak value depend on visual inspection of photodiode
+    a = df_slice[df_slice.f >= 31]   # peak value depend on visual inspection of photodiode cutoff value for green screen
     a.reset_index(level=0, inplace=True)
     value = a.iloc[0, 0]
     initial_corrected_data = df_slice.iloc[value:,0:5]
