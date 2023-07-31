@@ -19,61 +19,28 @@ def initial_processing(the_data):
     the_data_raw = os.path.join(the_drive,os.sep,the_repo,the_subrepo,the_type,  data_raw)
     ch_layout = os.path.join(the_drive,os.sep,the_repo,the_subrepo,the_type,  ch_config)
 
-    sfreq=256
-    df = pd.read_csv(the_data_path)
-    df.rename(columns = {'rotation':'event_label'}, inplace = True)
-    event_label= df['event_label']
-    event_label.dropna(inplace=True)
-    event_start= int(256*9) ## Sampling frequency * Instruction time 
-    trial_lenght= int(0.3*256*300) ## stim_duratin*sfreq*n_stim
-    events=event_label.to_frame()
-    rest = 15
-    stim = 0.3 #(stim duration)
-    n_stim = 300 #(number of stim in a single trial)
-    stim_len = 77 ## (stim_duration * sfreq)
-
-    x=[]
-    trial_rest= event_start + int(rest*sfreq)
-    trial_lenght= int(trial_rest+stim*sfreq*n_stim)
-    for i in  range(trial_rest,trial_lenght+1,stim_len):
-            x.append(i)
-    sequence=pd.DataFrame(x)
-    m=sequence.iloc[-1,:]
-    trial_rest_2 = int((rest*sfreq) + m)
-    trial_lenght_2 = int(trial_rest_2+stim*sfreq*n_stim)
-    for i in  range(trial_rest_2,trial_lenght_2+1,stim_len):
-        x.append(i)
-    sequence=pd.DataFrame(x)
-    m=sequence.iloc[-1,:]
-    trial_rest_3 = int((rest*sfreq) + m)
-    trial_lenght_3 = int(trial_rest_3+stim*sfreq*n_stim)
-    for i in  range(trial_rest_3,trial_lenght_3+1,stim_len):
-       x.append(i)
-    sequence=pd.DataFrame(x)
-    m=sequence.iloc[-1,:]
-    trial_rest_4 = int((rest*sfreq) + m)
-    trial_lenght_4 = int(trial_rest_4+stim*sfreq*n_stim)
-    for i in  range(trial_rest_4,trial_lenght_4+1,stim_len):
-        x.append(i)
-    sequence=pd.DataFrame(x)
-    m=sequence.iloc[-1,:]
-    trial_rest_5 = int((rest*sfreq) + m)
-    trial_lenght_5 = int(trial_rest_5+stim*sfreq*n_stim)
-    for i in  range(trial_rest_5,trial_lenght_5+1,stim_len):
-        x.append(i) 
-
-    events['event_sequence'] = x
-    events = events[["event_sequence", "event_label"]]
-
-    events["trial"]=""
-    ntimes=300
-    list=[1,2,3,4,5]
-    events['trial']= [i for i in list for _ in range(ntimes)]
-    event = events.head()
-    print(event)
-    #events=events.reset_index(drop=True, inplace=True)
     
-    events.to_csv('00674_S027_T001_events.csv',index=False)
+    df = pd.read_csv(the_data_path)
+    df.rename(columns={'rotation': 'event_label'}, inplace=True)
+    event_label = df['event_label'].dropna()
+
+    event_start = int(256 * 17.5)
+    sfreq=256
+    stim = 0.3
+    n_stim = 300
+    stim_len = math.ceil(sfreq * stim)
+    rest=10
+
+    x = []
+    for trial_number in range(1, 6):
+        trial_start = int((rest * sfreq) + x[-1]) if trial_number > 1 else event_start
+        trial_length = int(trial_start + stim * sfreq * n_stim)
+        for i in range(trial_start, trial_length + 1, stim_len):
+            x.append(i)
+
+    events = pd.DataFrame({'event_sequence': x, 'event_label': event_label})
+    events['trial'] = np.repeat(np.arange(1, 6), n_stim)
+    events.to_csv('00674_S027_T001_events.csv', index=False, encoding='utf-8')   
     
     # Slicing 
     df_slice = pd.read_csv(the_data_slicing)
