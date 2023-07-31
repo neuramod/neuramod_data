@@ -19,7 +19,7 @@ def initial_processing(the_data):
     the_data_raw = os.path.join(the_drive,os.sep,the_repo,the_subrepo,the_type,  data_raw)
     ch_layout = os.path.join(the_drive,os.sep,the_repo,the_subrepo,the_type,  ch_config)
 
-    
+    # Assign events according to the Psychopy file
     df = pd.read_csv(the_data_path)
     df.rename(columns={'rotation': 'event_label'}, inplace=True)
     event_label = df['event_label'].dropna()
