@@ -24,7 +24,7 @@ def initial_processing(the_data):
     df.rename(columns={'rotation': 'event_label'}, inplace=True)
     event_label = df['event_label'].dropna()
 
-    event_start = int(256 * 17.5)
+    event_start = int(256 * 17.5) # sampling frequency * time until the start of first trial
     sfreq=256
     stim = 0.3
     n_stim = 300
