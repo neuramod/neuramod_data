@@ -120,7 +120,7 @@ def classifier_pipeline(epochs):
     clf8 = QuadraticDiscriminantAnalysis()
     classifiers_names = ['Logistic Regression','Random Forest Classifier','GaussianNB','SVC', 'Decision Tree Classifier', 
                          'LDA', 'KNeighborsRegressor','Quadratic Discriminant Analysis']
-    cv = StratifiedShuffleSplit(n_splits=10, test_size=0.25, 
+    cv = StratifiedShuffleSplit(n_splits=10, test_size=0.30, 
                             random_state=42)
     classifiers = [clf1, clf2, clf3, clf4, clf5, clf6, clf7, clf8]
     accuracies=[]
