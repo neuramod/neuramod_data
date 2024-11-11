@@ -73,7 +73,7 @@ if __name__ == '__main__':
     data_dir = 'D:/data/data_testing/evoked'
     data_files = glob.glob(data_dir + '/*-ave.fif' )
     conditions = ['target:0','distractors']
-    roi = ['O1','Oz','O2','P3','P7','Pz','P4','P8','PO3','POz','PO4']
+    roi = ['Pz'] 
     tmin = 0.30
     tmax= 0.60
     perform_ttest_and_grand_average_plot(data_files,conditions, roi, tmin, tmax)
