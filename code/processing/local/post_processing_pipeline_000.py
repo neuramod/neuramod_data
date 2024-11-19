@@ -60,7 +60,7 @@ def pyriemann_pipeline(epoch):
     y = epoch.events[:, -1]
     y = LabelEncoder().fit_transform(y)
     cv = StratifiedShuffleSplit(n_splits=10, 
-                            random_state=42) # test_size=0.25, 
+                            random_state=42, test_size=0.30) 
     epoch, channels , time = X.shape
     X_reshaped = X.reshape(epoch, channels* time)
     scaler = StandardScaler()
