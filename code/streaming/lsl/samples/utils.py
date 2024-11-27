@@ -26,13 +26,15 @@ from sklearn.ensemble import RandomForestClassifier, VotingClassifier
 from sklearn.model_selection import cross_val_score
 from sklearn.metrics import (classification_report,confusion_matrix,ConfusionMatrixDisplay)
 #%%
-chunks = 77
-no_stimuli = 300
-stim = 0.3
-sfreq= 256
+
+no_stimuli = 300 ## Number of stimuli in a trial ##
+stim = 0.3       ## Stimulus duration ##
+sfreq= 256       ## Sampling frequency ##
+chunks = math.ceil(len_stimuli  * sfreq)  
 
 NOTCH_B, NOTCH_A = butter(4, np.array([55, 65]) / (256 / 2), btype='bandstop')
 
+## Save the eeg stream data ##
 def update_buffer(data_buffer, new_data, notch=False, filter_state=None):
     
     if new_data.ndim == 1:
@@ -50,19 +52,21 @@ def update_buffer(data_buffer, new_data, notch=False, filter_state=None):
 
     return new_buffer, filter_state
 
-
+## update buffer ##
 def get_last_data(data_buffer, newest_samples):
     
     new_buffer = data_buffer[(data_buffer.shape[0] - newest_samples):, :]
 
     return new_buffer
+
+## update events ##
 def update_event_len(event_buffers, new_datas):
                 
     event = np.append([event_buffers], [new_datas]) 
     event = event
     return event
 
-    
+## Create eeg events w.r.t the data ##    
 def event_buffer(event_buffer, new_data):
                 
     if new_data.ndim == 1:
@@ -71,7 +75,7 @@ def event_buffer(event_buffer, new_data):
     new_event = np.concatenate((event_buffer, new_data), axis=0) 
     new_event = new_event[new_data.shape[0]:, :]
     return new_event
-
+## Process the eeg data and events ##
 def processing(events, eeg_data):
     event_label = events
     
