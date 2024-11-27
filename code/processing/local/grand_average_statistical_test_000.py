@@ -1,3 +1,4 @@
+## Binary Grand average ##
 # Import libraries
 import mne
 import matplotlib.pyplot as plt
