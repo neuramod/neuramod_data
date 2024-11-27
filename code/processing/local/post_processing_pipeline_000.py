@@ -1,3 +1,4 @@
+## Binary Classification ##
 # Import libraries
 import mne
 import os
