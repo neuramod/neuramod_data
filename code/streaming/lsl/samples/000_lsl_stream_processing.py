@@ -71,7 +71,7 @@ if __name__ == '__main__':
                 print("looking for a EEG stream...")
                 while True:
                     event, timestamp = marker_inlet.pull_sample()
-                    chunk, timestamp = eeg_inlet.pull_chunk( timeout = 0.4,max_samples = chunks)#timeout = 0.3,
+                    chunk, timestamp = eeg_inlet.pull_chunk( timeout = 0.4,max_samples = chunks)
                     ch_data = np.array(chunk)
                     event_data = np.array(event)
                     stim_event = update_event_len(stim_event, event_data)
