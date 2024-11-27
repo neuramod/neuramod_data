@@ -23,19 +23,18 @@ import neurokit2 as nk
 from utils import *
 
 
-cutoff = 3100000
-sfreq= 256
-BUFFER_LENGTH= 90
-EPOCH_LENGTH = 1
-len_stimuli = 0.3
-no_stimuli = 300
-chunks = math.ceil(len_stimuli  * sfreq)
-trail_length = math.ceil(len_stimuli  * sfreq)* no_stimuli
-eeg_event = np.zeros((int(no_stimuli), 1))
+cutoff = 3100000   ## Photodiode cutoff value for synchronization ##
+sfreq= 256         ## Sampling frequency ##
+len_stimuli = 0.3  ## Stimulus duration ##
+no_stimuli = 300   ## Number of stimuli in a trial ##
+chunks = math.ceil(len_stimuli  * sfreq)                   ## number of data points in a single chunk ##
+trail_length = math.ceil(len_stimuli  * sfreq)* no_stimuli ## trial lenght ##
+eeg_event = np.zeros((int(no_stimuli), 1))                 ## initialize event as per number of stimuli in a trial ##
 stim_event=[]
 eeg_emp= []
 
 if __name__ == '__main__':
+                                        ### Initializing the streams (photodiode, eeg, markers) ###
     print("looking for a photodiode stream...")
     photo_stream = resolve_stream('type', 'FOT')
     photo_inlet = StreamInlet(photo_stream[0]) 
@@ -56,7 +55,7 @@ if __name__ == '__main__':
     filter_state = None
 
 
-
+                                        ### Processing the stream w.r.t the trials ###
     
     #print('Press Ctrl-C in the console to break the while loop.')
     try:
