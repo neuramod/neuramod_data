@@ -1,3 +1,6 @@
+# CITATION
+- Cutellic, P., Qureshi, N. (2022). EEG Recordings For Neural Correlates Of Visual Discrimination Under RSVP Oddball Stimulation with Dynamic Gratings Compositions. https://doi.org/10.3929/ethz-b-000738641
+
 # FILE STRUCTURE
 ## NAME
 `<PARTICIPANT_ID>` _ `<PHASE_ID>` _ `<SESSION_ID>` _ `<TASK_ID>`
